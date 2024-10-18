@@ -1,4 +1,30 @@
-git remote add origin git@github.com:Pall2006/simulation.git
+package ru.pall2006;
+
+import ru.pall2006.Coordinates;
+import ru.pall2006.entities.*;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapOfWorld {
+    HashMap<Coordinates, Entity> entities = new HashMap<>();
+
+    public MapOfWorld(HashMap<Coordinates, Entity> entities) {
+        this.entities = entities;
+    }
+
+
+    public void addEntities(Entity entity) {
+        entities.put(entity.getCoordinates(), entity);
+    }
+
+    public void multiply(int count, MapConsoleRenderer mapConsoleRenderer, Entity entity) {
+        for (int i = 0; i < count; i++) {
+            Entity newEntity = createEntityOfType(entity, mapConsoleRenderer);
+            entities.put(newEntity.getCoordinates(), newEntity);
+        }
+    }
+
     private Entity createEntityOfType(Entity entity, MapConsoleRenderer mapConsoleRenderer) {
         if (entity instanceof Rock) {
             return new Rock(mapConsoleRenderer);
