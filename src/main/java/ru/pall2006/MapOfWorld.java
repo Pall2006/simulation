@@ -1,8 +1,6 @@
 package ru.pall2006;
 
-import ru.pall2006.Coordinates;
 import ru.pall2006.entities.*;
-
 import java.util.HashMap;
 import java.util.Map;
 

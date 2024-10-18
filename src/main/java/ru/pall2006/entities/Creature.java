@@ -1,12 +1,9 @@
 package ru.pall2006.entities;
 
-import ru.pall2006.Coordinates;
 import ru.pall2006.MapConsoleRenderer;
 
 public abstract class Creature extends Entity {
-
     private int speed;
-
     private int healthPoints;
 
     public Creature(MapConsoleRenderer mapConsoleRenderer, int speed, int healthPoints) {
@@ -14,7 +11,6 @@ public abstract class Creature extends Entity {
         this.speed = speed;
         this.healthPoints = healthPoints;
     }
-
     public abstract void makeMove();
 
     public int getSpeed() {

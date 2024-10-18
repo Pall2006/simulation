@@ -14,9 +14,10 @@ public class Main {
         mapOfWorld.addEntities(new Rock(baseMapConsoleRenderer));
         mapOfWorld.addEntities(new Herbivore(baseMapConsoleRenderer, 5, 10));
         mapOfWorld.addEntities(new Predator(baseMapConsoleRenderer, 5, 10, 10));
+        mapOfWorld.multiply(5,baseMapConsoleRenderer, new Rock(baseMapConsoleRenderer));
         mapOfWorld.showEntitiesOnRender(baseMapConsoleRenderer);
         baseMapConsoleRenderer.render();
-       mapOfWorld.multiply(5,baseMapConsoleRenderer, new Rock(baseMapConsoleRenderer));
+       
 
 //        StartSimulation startSimulation = new StartSimulation(mapOfWorld, baseMapConsoleRenderer);
 

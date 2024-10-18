@@ -11,8 +11,6 @@ public class MapConsoleRenderer {
             Arrays.fill(worldCoordinates[i], "..");
         }
     }
-
-
     public void render() {
         for (int i = 0; i < worldCoordinates.length; i++) {
             for (int j = 0; j < worldCoordinates[i].length; j++) {
@@ -22,9 +20,6 @@ public class MapConsoleRenderer {
         }
     }
 }
-
-
-
 
 //    public void render(MapOfWorld map) {
 //        for(int rank = 8; rank>=1; rank--) {
